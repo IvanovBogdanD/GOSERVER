@@ -131,3 +131,7 @@ with open("/mnt/data/README.md", "w", encoding="utf-8") as f:
     f.write(content)
 
 "/mnt/data/README.md"
+Результат
+'/mnt/data/README.md'
+
+
