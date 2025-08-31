@@ -67,58 +67,11 @@ https://y7wrkb-2a10-c943-100--a22.ru.tuna.am
 }
 
 ##  Документация API (OpenAPI 3.0)
+Вот текст по пунктам:
 
-openapi: 3.0.0
-info:
-title: Go Webserver Test
-version: 1.0.0
-description: |
-Простой веб-сервер на Go с тремя эндпоинтами:
-- /
-- /api/about-me
-- /api/why-go
-servers:
-
-url: http://localhost:8080
-
-url: https://y7wrkb-2a10-c943-100--a22.ru.tuna.am
-paths:
-/api/about-me:
-get:
-summary: Информация обо мне
-responses:
-'200':
-description: JSON с информацией обо мне
-content:
-application/json:
-schema:
-type: object
-properties:
-name:
-type: string
-experience:
-type: string
-skills:
-type: array
-items:
-type: string
-interest:
-type: string
-/api/why-go:
-get:
-summary: Почему выбрал Go
-responses:
-'200':
-description: JSON с причинами изучения Go и ожиданиями
-content:
-application/json:
-schema:
-type: object
-properties:
-reason:
-type: string
-expectations:
-type: string
+1. Откройте Swagger Online Editor.
+2. Вставьте содержимое файла `openapi.yaml`.
+3. Если репозиторий публичный, можно использовать прямую ссылку на файл для просмотра документации.
 
 
 ##  Автор
