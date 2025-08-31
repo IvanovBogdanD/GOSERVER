@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Go Webserver Test
+  version: 1.0.0
+  description: |
+    Простой веб-сервер на Go с тремя эндпоинтами:
+    - Корневая страница (`/`)
+    - Информация обо мне (`/api/about-me`)
+    - Почему Go (`/api/why-go`)
+servers:
+  - url: http://localhost:8080
+    description: Локальный сервер
+  - url: https://y7wrkb-2a10-c943-100--a22.ru.tuna.am
+    description: Внешний доступ через туннель (ограниченное время)
+paths:
+  /:
+    get:
+      summary: Корневая страница
+      description: |
+        Возвращает HTML-страницу со списком доступных эндпоинтов.
+      responses:
+        '200':
+          description: HTML-страница с ссылками
+          content:
+            text/html:
+              schema:
+                type: string
+  /api/about-me:
+    get:
+      summary: Информация обо мне
+      description: |
+        Возвращает JSON с базовой информацией об авторе, опыте и навыках.
+      responses:
+        '200':
+          description: JSON с данными об авторе
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: Богдан
+                  experience:
+                    type: string
+                    example: 6 лет в программировании
+                  skills:
+                    type: array
+                    items:
+                      type: string
+                    example: ["C++", "JavaScript", "Backend", "Автоматизация"]
+                  interest:
+                    type: string
+                    example: Люблю backend-разработку и автоматизацию
+  /api/why-go:
+    get:
+      summary: Почему Go
+      description: |
+        Возвращает JSON с причинами изучения Go и ожиданиями от курса.
+      responses:
+        '200':
+          description: JSON с данными о Go
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reason:
+                    type: string
+                    example: Go — быстрый, минималистичный язык с отличной поддержкой многопоточности
+                  expectations:
+                    type: string
+                    example: Хочу научиться писать производительные веб-сервисы и понимать, как строить масштабируемые системы
