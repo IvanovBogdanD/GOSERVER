@@ -1,4 +1,4 @@
-content = # Go Webserver Test
+# Go Webserver Test
 
 Простой веб-сервер на Go, выполненный в рамках тестового задания.
 
