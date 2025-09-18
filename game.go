@@ -235,6 +235,6 @@ func main() {
 
 		result := handleCommand(input)
 		fmt.Println(result)
-		//---
+		//----
 	}
 }
