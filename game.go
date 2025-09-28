@@ -7,15 +7,6 @@ import (
 	"strings"
 )
 
-type Gamestatus struct {
-	State     string   //местоположение перса
-	Inventory []string //slice of strings инвентаря, как ни странно
-	Rukzak    bool     //есть - нет рюкзака
-}
-type Wall struct {
-	Room  string   //название комнаты
-	Walls []string //куда нельзя из неё пройти, читай стены
-}
 type Room struct {
 	RoomName        string
 	RoomLoot        []string
