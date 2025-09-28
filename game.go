@@ -123,6 +123,9 @@ func goTo(place string) string {
 			if current.name == "кухня" && backpack {
 				return "кухня, ничего интересного. можно пройти - коридор"
 			}
+			if current.name == "комната" {
+				return "ты в своей комнате. можно пройти - коридор"
+			}
 			return lookAround()
 		}
 	}

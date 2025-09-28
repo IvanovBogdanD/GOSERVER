@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -68,16 +67,16 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	`)
 }
 
-func main() {
-	// Регистрируем обработчики для роутов
-	http.HandleFunc("/", rootHandler)
-	http.HandleFunc("/api/about-me", aboutMeHandler)
-	http.HandleFunc("/api/why-go", whyGoHandler)
+// func main() {
+// 	// Регистрируем обработчики для роутов
+// 	http.HandleFunc("/", rootHandler)
+// 	http.HandleFunc("/api/about-me", aboutMeHandler)
+// 	http.HandleFunc("/api/why-go", whyGoHandler)
 
-	// Запускаем сервер на порту 8080
-	fmt.Println("Сервер запущен на http://localhost:8080")
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		log.Fatal("Ошибка запуска сервера: ", err)
-	}
-}
+// 	// Запускаем сервер на порту 8080
+// 	fmt.Println("Сервер запущен на http://localhost:8080")
+// 	err := http.ListenAndServe(":8080", nil)
+// 	if err != nil {
+// 		log.Fatal("Ошибка запуска сервера: ", err)
+// 	}
+// }
